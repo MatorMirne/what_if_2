@@ -9,6 +9,6 @@ public class StartScript : MonoBehaviour
     private void OnMouseDown()
     {
         Debug.Log("Start!");
-        SceneManager.LoadScene("SampleStage");
+        SceneManager.LoadScene("1-1-1");
     }
 }
