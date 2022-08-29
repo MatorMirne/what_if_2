@@ -9,6 +9,7 @@ public class wang : MonoBehaviour
 
     public Sprite walk1;
     public Sprite walk2;
+    public Sprite seek;
     public float speed;
 
     Vector2 start_position;
@@ -26,25 +27,35 @@ public class wang : MonoBehaviour
         time += Time.deltaTime;
         timer += Time.deltaTime*speed;
 
-        transform.position = start_position + new Vector2(-time* speed, 0);
+        if (transform.position.x < 0.15f)
+        {
+            spriteRenderer.sprite = seek;
+        }
+        else Walk();
+
+        if (time> 3.907599f)
+        {
+            Debug.Log("씬1완료");
+            SceneManager.LoadScene("1-1-2");
+        }
+
+    }
+    void Walk()
+    {
+        transform.position = start_position + new Vector2(-time * speed, 0);
 
         // 1초마다 스프라이트 변경
-        if (0<=timer && timer<1)
+        if (0 <= timer && timer < 1)
         {
             spriteRenderer.sprite = walk1;
         }
-        else{
+        else
+        {
             spriteRenderer.sprite = walk2;
             if (timer > 2)
             {
                 timer = 0;
             }
-        }
-
-        if (transform.position.x < -3.81f)
-        {
-            Debug.Log("씬1완료");
-            SceneManager.LoadScene("1-1-2");
         }
     }
 }
