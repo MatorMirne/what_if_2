@@ -4,16 +4,7 @@ using UnityEngine;
 
 public class ManagerScript : MonoBehaviour
 {
-    public static int score = 0;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    // Chapter 1 ¹Ýº¹È½¼ö
+    static public int chapter1_repeat_num =0;
+    static public int score;
 }

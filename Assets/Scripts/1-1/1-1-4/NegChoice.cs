@@ -20,6 +20,7 @@ public class NegChoice : MonoBehaviour
     private void OnMouseDown()
     {
         ManagerScript.score--;
+        ManagerScript.chapter1_repeat_num++;
         Debug.Log(ManagerScript.score);
         SceneManager.LoadScene("1-1-5");
     }
