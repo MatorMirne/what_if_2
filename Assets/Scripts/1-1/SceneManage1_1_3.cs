@@ -7,6 +7,9 @@ public class SceneManage1_1_3 : MonoBehaviour
     public GameObject gameObject;
     CutSceneScript cutSceneScript;
 
+    public GameObject roop1;
+    public GameObject roop2;
+
     void Start()
     {
         cutSceneScript = gameObject.GetComponent<CutSceneScript>();
@@ -18,6 +21,15 @@ public class SceneManage1_1_3 : MonoBehaviour
         else
         {
             cutSceneScript.next_scene = "1-1-4";
+        }
+
+        if (ManagerScript.chapter1_repeat_num == 1)
+        {
+            roop1.SetActive(true);
+        }
+        else if (ManagerScript.chapter1_repeat_num >= 2)
+        {
+            roop2.SetActive(true);
         }
 
     }
