@@ -15,7 +15,7 @@ public class CutSceneScript : MonoBehaviour
 
         if (timer > time)
         {
-            SceneManager.LoadScene(next_scene);
+           SceneManager.LoadScene(next_scene);
         }
     }
 }
