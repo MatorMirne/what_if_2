@@ -7,8 +7,10 @@ public class SceneManage1_1_4 : MonoBehaviour
 {
     public float timer;
 
-    public bool point1 = false;
+    public bool point1 = true;
     public GameObject str1;
+
+    public bool point2 = false;
     public GameObject choice1;
     public GameObject choice2;
 
@@ -18,13 +20,15 @@ public class SceneManage1_1_4 : MonoBehaviour
     {
         timer += Time.deltaTime;
 
-        if (timer > 1)
+        if (timer > 1 && point1)
         {
+            point1 = false;
             FadeOut(str1);
         }
 
         if (timer > 2)
         {
+            point2 = true;
             FadeIn(choice1);
             FadeIn(choice2);
         }
@@ -52,6 +56,7 @@ public class SceneManage1_1_4 : MonoBehaviour
         }
     }
 
+    // [주의사항] FadeOut이 여러 번 실행되지 않도록 주의해 주세요!
     void FadeOut(GameObject _gameObject)
     {
         if (_gameObject.activeSelf == true)
@@ -67,7 +72,7 @@ public class SceneManage1_1_4 : MonoBehaviour
         {
             fade_count += 0.01f;
             yield return new WaitForSeconds(0.01f);
-            _gameObject.GetComponent<SpriteRenderer>().color = new Color(255, 255, 255, 1.0f - fade_count);
+            _gameObject.GetComponent<SpriteRenderer>().color = new Color(255, 255, 255, 1.0f-fade_count);
         }
         _gameObject.SetActive(false);
     }
