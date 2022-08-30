@@ -153,8 +153,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timer: 0
-  point1: 0
+  point1: 1
   str1: {fileID: 114914444}
+  point2: 0
   choice1: {fileID: 332517099}
   choice2: {fileID: 1192478740}
 --- !u!4 &102912561
