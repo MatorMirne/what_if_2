@@ -300,8 +300,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1923792649}
-  - component: {fileID: 1923792648}
   - component: {fileID: 1923792647}
+  - component: {fileID: 1923792650}
   m_Layer: 0
   m_Name: WangSafe
   m_TagString: Untagged
@@ -361,23 +361,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &1923792648
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1923792646}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 327b986df5f34764cac0255ecb8df30b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  walk1: {fileID: 21300000, guid: 0cd7a1d98862e1f4fb5102e2fa29bd6c, type: 3}
-  walk2: {fileID: 21300000, guid: 6e992e3cc96c1934ea6fe72cb06e8710, type: 3}
-  seek: {fileID: 21300000, guid: 7a0e0a2d30dd4b14491ccfd906d50e81, type: 3}
-  speed: 1.5
-  time: 0
 --- !u!4 &1923792649
 Transform:
   m_ObjectHideFlags: 0
@@ -386,10 +369,26 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1923792646}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.76, y: -0.64, z: -0.011603281}
+  m_LocalPosition: {x: 0.15, y: -0.64, z: -0.011603281}
   m_LocalScale: {x: 0.3846353, y: 0.3846353, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1923792650
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1923792646}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 022818651b62e23469a2bf2ff038beba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  walk1: {fileID: 21300000, guid: 0cd7a1d98862e1f4fb5102e2fa29bd6c, type: 3}
+  walk2: {fileID: 21300000, guid: 6e992e3cc96c1934ea6fe72cb06e8710, type: 3}
+  speed: 1.5
+  time: 0
