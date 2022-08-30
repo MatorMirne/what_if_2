@@ -350,7 +350,7 @@ SpriteRenderer:
   m_SortingLayerID: 632055525
   m_SortingLayer: 2
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: adf6e677500a45b458414c9a06abd84d, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 0cd7a1d98862e1f4fb5102e2fa29bd6c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -373,9 +373,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 327b986df5f34764cac0255ecb8df30b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  walk1: {fileID: 21300000, guid: a2e1e03b92a863b4e9dccbcdc1602d24, type: 3}
-  walk2: {fileID: 21300000, guid: adf6e677500a45b458414c9a06abd84d, type: 3}
-  seek: {fileID: 21300000, guid: 336dbc16e431be143a23087105bba93b, type: 3}
+  walk1: {fileID: 21300000, guid: 0cd7a1d98862e1f4fb5102e2fa29bd6c, type: 3}
+  walk2: {fileID: 21300000, guid: 6e992e3cc96c1934ea6fe72cb06e8710, type: 3}
+  seek: {fileID: 21300000, guid: 7a0e0a2d30dd4b14491ccfd906d50e81, type: 3}
   speed: 1.5
   time: 0
 --- !u!4 &1923792649
