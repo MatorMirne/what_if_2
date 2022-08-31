@@ -54,7 +54,7 @@ public class SceneManage1_1_6 : MonoBehaviour
 
         if (wang_transform.position.x> 3.93)
         {
-            SceneManager.LoadScene("1-2-1");
+            SceneManager.LoadScene("1-1Score");
         }
 
     }

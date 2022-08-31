@@ -270,8 +270,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a353420b7cef2ad48b46230f7213bc9d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  roop1: {fileID: 21300000, guid: 59b32414f3716f64399d6c919fca27c7, type: 3}
-  roop2: {fileID: 21300000, guid: daf5ce2fb838f6948967bec621dc3ccd, type: 3}
+  loop1: {fileID: 21300000, guid: 59b32414f3716f64399d6c919fca27c7, type: 3}
+  loop2: {fileID: 21300000, guid: daf5ce2fb838f6948967bec621dc3ccd, type: 3}
 --- !u!1 &332517099
 GameObject:
   m_ObjectHideFlags: 0

@@ -9,9 +9,9 @@ public class SceneManage1_1_2 : MonoBehaviour
 
     void Start()
     {
-        if(ManagerScript.chapter1_repeat_num != 0)
+        if(ManagerScript.chapter1_1repeat_num != 0)
         {
-            if (ManagerScript.chapter1_repeat_num == 1)
+            if (ManagerScript.chapter1_1repeat_num == 1)
             {
                 roop1.SetActive(true);
             }

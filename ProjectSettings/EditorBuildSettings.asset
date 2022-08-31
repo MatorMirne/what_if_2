@@ -30,6 +30,9 @@ EditorBuildSettings:
     path: Assets/Scenes/1-1-6.unity
     guid: 526cf14d6b3afdc4088a06dabedcb90c
   - enabled: 1
+    path: Assets/Scenes/1-1Score.unity
+    guid: fbdae82946bc7e048b34344a7b259073
+  - enabled: 1
     path: Assets/Scenes/1-2-1.unity
     guid: 879f562980f183047bf9a384459ffd74
   m_configObjects: {}

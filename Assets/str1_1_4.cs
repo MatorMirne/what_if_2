@@ -4,18 +4,18 @@ using UnityEngine;
 
 public class str1_1_4 : MonoBehaviour
 {
-    public Sprite roop1;
-    public Sprite roop2;
+    public Sprite loop1;
+    public Sprite loop2;
 
     private void Start()
     {
-        if (ManagerScript.chapter1_repeat_num == 1)
+        if (ManagerScript.chapter1_1repeat_num == 1)
         {
-            gameObject.GetComponent<SpriteRenderer>().sprite = roop1;
+            gameObject.GetComponent<SpriteRenderer>().sprite = loop1;
         }
-        else if (ManagerScript.chapter1_repeat_num >= 2)
+        else if (ManagerScript.chapter1_1repeat_num >= 2)
         {
-            gameObject.GetComponent<SpriteRenderer>().sprite = roop2;
+            gameObject.GetComponent<SpriteRenderer>().sprite = loop2;
         }
 
     }
