@@ -1,12 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using static UnityEditor.PlayerSettings;
 
-public class TimerScript : MonoBehaviour
+public class timer1_2_1 : MonoBehaviour
 {
     public float time_total;
     public float time_now;
+    public GameObject scene_manager;
 
     Transform timer_transform;
     Vector2 fullsize;
@@ -31,10 +31,10 @@ public class TimerScript : MonoBehaviour
 
     IEnumerator Timer()
     {
-        while (gauge<1)
+        while (gauge < 1)
         {
             time_now += Time.deltaTime;
-            gauge = time_now / time_total*20;
+            gauge = time_now / time_total * 20;
 
             timer_transform.localScale = fullsize * new Vector2(gauge, 1);
             timer_transform.position = pos + new Vector2(gauge * 2.3f, 0);
@@ -46,8 +46,8 @@ public class TimerScript : MonoBehaviour
         TimeOver();
     }
 
-    void TimeOver()
+    protected void TimeOver()
     {
-
+        scene_manager.GetComponent<SceneManage1_2_1>().LoadNextScene();
     }
 }

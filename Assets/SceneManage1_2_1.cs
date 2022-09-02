@@ -1,14 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class SceneManage1_2_1 : MonoBehaviour
 {
+    public GameObject window;
     public GameObject buttonMain, buttonSub1, buttonSub2, buttonSub3;
     public GameObject big_elec;
+    public string next_scene;
 
     bool big_elec_on;
     bool big_elec_ready;
+    bool elec_clear;
 
     Transform big_elec_transform;
     Vector2 temp;
@@ -30,7 +34,11 @@ public class SceneManage1_2_1 : MonoBehaviour
     {
         if(!buttonMain.gameObject.GetComponent<ButtonScript>().isOn || !buttonSub1.gameObject.GetComponent<ButtonScript>().isOn && !buttonSub2.gameObject.GetComponent<ButtonScript>().isOn && !buttonSub3.gameObject.GetComponent<ButtonScript>().isOn)
         {
-            Debug.Log("elec clear");
+            elec_clear = true;
+        }
+        else
+        {
+            elec_clear = false;
         }
     }
 
@@ -78,5 +86,19 @@ public class SceneManage1_2_1 : MonoBehaviour
             yield return new WaitForSeconds(0.01f);
         }
         big_elec_ready = true;
+    }
+
+    public void LoadNextScene()
+    {
+        if (elec_clear && !(window.GetComponent<WindowScript>().isOpen))
+        {
+            // 클리어
+            SceneManager.LoadScene("1-2-1clear");
+        }
+        else
+        {
+            // 실패
+            SceneManager.LoadScene("1-2-1fail");
+        }
     }
 }
