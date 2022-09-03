@@ -505,7 +505,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   before: {fileID: 447815170}
   after: {fileID: 1297230570}
-  nextScene: 1-3
+  nextScene: 1-3-1
 --- !u!1 &1909838616
 GameObject:
   m_ObjectHideFlags: 0
