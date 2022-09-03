@@ -8,11 +8,15 @@ public class SceneManage1_2_1 : MonoBehaviour
     public GameObject window;
     public GameObject buttonMain, buttonSub1, buttonSub2, buttonSub3;
     public GameObject big_elec;
+    public GameObject multiplug;
     public string next_scene;
 
     bool big_elec_on;
     bool big_elec_ready;
-    bool elec_clear;
+
+    public static bool elec_clear = false;
+    public static bool window_clear = false;
+    public static bool multiplug_clear = false;
 
     Transform big_elec_transform;
     Vector2 temp;
@@ -39,6 +43,22 @@ public class SceneManage1_2_1 : MonoBehaviour
         else
         {
             elec_clear = false;
+        }
+        if (!window.GetComponent<WindowScript>().isOpen)
+        {
+            window_clear = true;
+        }
+        else
+        {
+            window_clear = false;
+        }
+        if (multiplug.GetComponent<MultiPlug>().plugUp)
+        {
+            multiplug_clear = true;
+        }
+        else
+        {
+            multiplug_clear = false;
         }
     }
 
@@ -90,15 +110,6 @@ public class SceneManage1_2_1 : MonoBehaviour
 
     public void LoadNextScene()
     {
-        if (elec_clear && !(window.GetComponent<WindowScript>().isOpen))
-        {
-            // 클리어
-            SceneManager.LoadScene("1-2-1clear");
-        }
-        else
-        {
-            // 실패
-            SceneManager.LoadScene("1-2-1fail");
-        }
+        SceneManager.LoadScene("1-2Score");
     }
 }

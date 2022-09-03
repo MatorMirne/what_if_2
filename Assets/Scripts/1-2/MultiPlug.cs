@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class MultiPlug : MonoBehaviour
 {
+    public bool isUp = false;
+
     public Sprite plugUp;
     SpriteRenderer spriteRenderer;
 
@@ -26,6 +28,7 @@ public class MultiPlug : MonoBehaviour
 
     private void OnMouseDown()
     {
+        isUp = true;
         spriteRenderer.sprite = plugUp;
     }
 }
