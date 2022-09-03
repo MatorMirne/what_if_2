@@ -52,13 +52,17 @@ public class SceneManage1_2_1 : MonoBehaviour
         {
             window_clear = false;
         }
-        if (multiplug.GetComponent<MultiPlug>().plugUp)
+        if (multiplug.GetComponent<MultiPlug>().isUp)
         {
             multiplug_clear = true;
         }
         else
         {
             multiplug_clear = false;
+        }
+        if(elec_clear && window_clear && multiplug_clear)
+        {
+            SceneManager.LoadScene("1-2Score");
         }
     }
 

@@ -41,6 +41,7 @@ public class SceneManage1_1Score : SceneBase
             {
                 FadeOut(bad);
                 point = true;
+                Debug.Log("fadeout_1");
             }
         }
 

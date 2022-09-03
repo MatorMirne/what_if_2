@@ -8,6 +8,7 @@ public class SceneManage1_2Score : SceneBase
     //  하나 이상 실패했을 경우의 수 7개
     public GameObject wang, good, badMultiplug, badWindow, badElec;
     bool point = true;
+    bool repeat = true;
     float timer = 0;
 
     void Update()
@@ -17,19 +18,20 @@ public class SceneManage1_2Score : SceneBase
         if (SceneManage1_2_1.elec_clear && SceneManage1_2_1.multiplug_clear && SceneManage1_2_1.window_clear)
         {
             //  good
+            repeat = false;
             success(good);
         }
-        else if(SceneManage1_2_1.elec_clear && SceneManage1_2_1.multiplug_clear && !SceneManage1_2_1.window_clear)
+        else if (SceneManage1_2_1.elec_clear && SceneManage1_2_1.multiplug_clear && !SceneManage1_2_1.window_clear)
         {
             //  window fail
             fail1(badWindow);
         }
-        else if(SceneManage1_2_1.elec_clear && !SceneManage1_2_1.multiplug_clear && SceneManage1_2_1.window_clear)
+        else if (SceneManage1_2_1.elec_clear && !SceneManage1_2_1.multiplug_clear && SceneManage1_2_1.window_clear)
         {
             //  multiplug fail
             fail1(badMultiplug);
         }
-        else if(!SceneManage1_2_1.elec_clear && SceneManage1_2_1.multiplug_clear && SceneManage1_2_1.window_clear)
+        else if (!SceneManage1_2_1.elec_clear && SceneManage1_2_1.multiplug_clear && SceneManage1_2_1.window_clear)
         {
             //  elec fail
             fail1(badElec);
@@ -49,7 +51,7 @@ public class SceneManage1_2Score : SceneBase
             //  multiplug + window fail
             fail2(badMultiplug, badWindow);
         }
-        else
+        else if(!SceneManage1_2_1.elec_clear && !SceneManage1_2_1.multiplug_clear && !SceneManage1_2_1.window_clear)
         {
             //  all fail
             fail3(badElec, badMultiplug, badWindow);
@@ -57,32 +59,39 @@ public class SceneManage1_2Score : SceneBase
 
         if (timer > 4.5)
         {
-            SceneManager.LoadScene("1-2-1");
+            if (repeat)
+            {
+                Debug.Log("repeat");
+                SceneManager.LoadScene("1-2-2");
+            }
+            if (!repeat)
+            {
+                Debug.Log("continue");
+                SceneManager.LoadScene("TimeTransAtoE");
+            }
         }
     }
 
     void success(GameObject good)
     {
-        timer += Time.deltaTime;
         if (timer < 2.5 && point)
         {
             FadeIn(good);
-            FadeIn(wang);
             point = false;
         }
         else if (timer > 2.5 && !point)
         {
             FadeOut(good);
-            FadeOut(wang);
             point = true;
         }
-     
+
     }
 
     void fail1(GameObject bad)
-    {   
+    {
         if (timer < 2.5 && point)
         {
+            ManagerScript.score -= 1;
             FadeIn(bad);
             FadeIn(wang);
             point = false;
@@ -93,13 +102,14 @@ public class SceneManage1_2Score : SceneBase
             FadeOut(wang);
             point = true;
         }
-     
+
     }
 
     void fail2(GameObject bad1, GameObject bad2)
     {
         if (timer < 2.5 && point)
         {
+            ManagerScript.score -= 2;
             FadeIn(bad1);
             FadeIn(bad2);
             FadeIn(wang);
@@ -114,10 +124,11 @@ public class SceneManage1_2Score : SceneBase
         }
     }
 
-    void fail3(GameObject bad1, GameObject bad2 ,GameObject bad3)
+    void fail3(GameObject bad1, GameObject bad2, GameObject bad3)
     {
         if (timer < 2.5 && point)
         {
+            ManagerScript.score -= 3;
             FadeIn(bad1);
             FadeIn(bad2);
             FadeIn(bad3);
