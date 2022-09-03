@@ -3,7 +3,10 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - hole
+  - traffic_light
+  - street_light
   layers:
   - Default
   - TransparentFX

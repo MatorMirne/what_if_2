@@ -19,7 +19,7 @@ public class wang1_5_2 : MonoBehaviour
     }
 
     private void Update()
-    { 
+    {
         time += Time.deltaTime;
         walk_time += Time.deltaTime;
         if (walk_time > 0.5f)
@@ -27,12 +27,12 @@ public class wang1_5_2 : MonoBehaviour
             walk_time = 0;
             Image_Change();
         }
-        transform.position = startpos + new Vector2(0,time) + move;
+        transform.position = startpos + new Vector2(0, time) + move;
     }
 
     void Image_Change()
     {
-        if( gameObject.GetComponent<SpriteRenderer>().sprite == walk1)
+        if (gameObject.GetComponent<SpriteRenderer>().sprite == walk1)
         {
             gameObject.GetComponent<SpriteRenderer>().sprite = walk2;
         }
@@ -41,7 +41,7 @@ public class wang1_5_2 : MonoBehaviour
             gameObject.GetComponent<SpriteRenderer>().sprite = walk1;
         }
     }
-    
+
     public void Move_Right()
     {
         if (move.x < 2)
@@ -56,5 +56,19 @@ public class wang1_5_2 : MonoBehaviour
         {
             move += new Vector2(-1, 0);
         }
+    }
+
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.tag == "hole")
+        {
+            //빠져
+            
+        }
+        else if (other.tag == "street_light" || other.tag == "traffic_light")
+        {
+            //감전
+        }
+        
     }
 }
