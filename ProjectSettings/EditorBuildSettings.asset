@@ -42,12 +42,12 @@ EditorBuildSettings:
     path: Assets/Scenes/1-2Score.unity
     guid: 953c8f4c2968a3a4a990ddba25e7618d
   - enabled: 1
-    path: Assets/Scenes/TimeTransAtoE.unity
-    guid: c2497e1d7e953364fb1123a6493c9929
-  - enabled: 1
     path: Assets/Scenes/1-3-1.unity
     guid: ff44cb256dfe79243a2b2d1256c5feba
   - enabled: 1
     path: Assets/Scenes/1-3-2.unity
     guid: c480c3312f3fcd64180fdaaaa85fc331
+  - enabled: 1
+    path: Assets/Scenes/1-5-1.unity
+    guid: 1d1ffec709b00cb4095e8fd400535342
   m_configObjects: {}
