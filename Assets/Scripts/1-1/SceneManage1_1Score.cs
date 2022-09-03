@@ -5,17 +5,10 @@ using UnityEngine.SceneManagement;
 
 public class SceneManage1_1Score : SceneBase
 {
-    public GameObject good, bad;
+    public GameObject good,good_1, bad;
     bool point = true;
     float timer = 0;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
     void Update()
     {
         timer += Time.deltaTime;
@@ -25,14 +18,18 @@ public class SceneManage1_1Score : SceneBase
             if(timer < 2.5 && point)
             {
                 FadeIn(good);
+                FadeIn(good_1);
                 point = false;
             }
             else if(timer > 2.5 && !point)
             {
                 FadeOut(good);
+                FadeOut(good_1);
                 point = true;
+                Debug.Log("fadeout");
             }
         }
+
         else
         {
             if (timer < 2.5 && point)
@@ -49,7 +46,7 @@ public class SceneManage1_1Score : SceneBase
 
         if(timer > 4.5)
         {
-            SceneManager.LoadScene("TimeTransDtoA");
+            SceneManager.LoadScene("1-2-1");
         }
     }
 }
