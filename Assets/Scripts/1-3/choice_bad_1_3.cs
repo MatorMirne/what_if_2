@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class choice_bad_1_3 : MonoBehaviour
 {
+    public GameObject error_message;
     private void OnMouseDown()
     {
-        // 안된다는 문구 출력되게
+        Instantiate(error_message);
+        ManagerScript.score--;
     }
 }

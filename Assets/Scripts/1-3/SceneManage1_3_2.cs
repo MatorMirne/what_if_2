@@ -27,17 +27,19 @@ public class SceneManage1_3_2 : SceneBase
         time += Time.deltaTime;
 
 
-        if (time > 1.3f)
+        if (time > 0.5f)
         {
             background.GetComponent<SpriteRenderer>().sprite = background2;
         }
 
-        if (time > 2.6f&& point1)
+        if (time > 1.0f&& point1)
         {
             point1 = false;
             FadeIn(choice1);
             FadeIn(choice2);
         }
+
+        
     }
 
     public void LoadScene()
