@@ -753,7 +753,7 @@ MonoBehaviour:
   buttonSub2: {fileID: 760505223}
   buttonSub3: {fileID: 1536503499}
   big_elec: {fileID: 1537333834}
-  next_scene: 
+  next_scene: 1-2Score
 --- !u!4 &1281805147
 Transform:
   m_ObjectHideFlags: 0
