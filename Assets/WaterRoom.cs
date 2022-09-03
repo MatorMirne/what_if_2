@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class WaterRoom : MonoBehaviour
 {
-    Vector2 pos;
+    public Vector2 pos;
 
     private void Start()
     {
@@ -15,7 +15,7 @@ public class WaterRoom : MonoBehaviour
     void Update()
     {
         Debug.Log(pos.x + " " + pos.y);
-        transform.position = new Vector2(pos.x, pos.y + 0.001f);
+        transform.position = new Vector2(pos.x, pos.y + 0.0007f);
         pos = transform.position;
     }
 }
