@@ -11,5 +11,5 @@ public class ManagerScript : MonoBehaviour
     public enum datas_1_5 { clear, hole, elec };
     static public int data_1_5 = (int)datas_1_5.clear; 
 
-    // Debug.Log("(스코어 -n) " + "현재 스코어:" + ManagerScript.chapter1_score);
+    // Debug.Log("(스코어 -n) " + "현재 스코어:" + ManagerS cript.chapter1_score);
 }
