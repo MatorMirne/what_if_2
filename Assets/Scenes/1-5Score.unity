@@ -897,6 +897,7 @@ MonoBehaviour:
   clear: {fileID: 1745321555}
   hole: {fileID: 1117485524}
   elec: {fileID: 1142143175}
+  next_scene: 1-6-1
 --- !u!4 &1312978825
 Transform:
   m_ObjectHideFlags: 0
