@@ -7,9 +7,9 @@ public class NegChoice : MonoBehaviour
 {
     private void OnMouseDown()
     {
-        ManagerScript.score--;
+        ManagerScript.chapter1_score--;
         ManagerScript.chapter1_1repeat_num++;
-        Debug.Log(ManagerScript.score);
+        Debug.Log("(스코어 -1) "+"현재 스코어:"+ManagerScript.chapter1_score);
         SceneManager.LoadScene("1-1-5");
     }
 }

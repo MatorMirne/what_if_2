@@ -91,7 +91,8 @@ public class SceneManage1_2Score : SceneBase
     {
         if (timer < 2.5 && point)
         {
-            ManagerScript.score -= 1;
+            ManagerScript.chapter1_score -= 1;
+            Debug.Log("(스코어 -1) " + "현재 스코어:" + ManagerScript.chapter1_score);
             FadeIn(bad);
             FadeIn(wang);
             point = false;
@@ -109,7 +110,8 @@ public class SceneManage1_2Score : SceneBase
     {
         if (timer < 2.5 && point)
         {
-            ManagerScript.score -= 2;
+            ManagerScript.chapter1_score -= 2;
+            Debug.Log("(스코어 -2) " + "현재 스코어:" + ManagerScript.chapter1_score);
             FadeIn(bad1);
             FadeIn(bad2);
             FadeIn(wang);
@@ -128,7 +130,8 @@ public class SceneManage1_2Score : SceneBase
     {
         if (timer < 2.5 && point)
         {
-            ManagerScript.score -= 3;
+            ManagerScript.chapter1_score -= 3;
+            Debug.Log("(스코어 -3) " + "현재 스코어:" + ManagerScript.chapter1_score);
             FadeIn(bad1);
             FadeIn(bad2);
             FadeIn(bad3);
