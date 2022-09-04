@@ -15,10 +15,10 @@ public class SceneManage1_4Score : SceneBase
     {
         if (!GasScript.isOff)
         {
-            ManagerScript.score--;
+            ManagerScript.chapter1_score--;
             if (!LightScript.isOn)
             {
-                ManagerScript.score--;
+                ManagerScript.chapter1_score--;
             }
         }
     }
@@ -93,7 +93,7 @@ public class SceneManage1_4Score : SceneBase
     {
         if (timer < 2.5 && point)
         {
-            ManagerScript.score -= 2;
+            ManagerScript.chapter1_score -= 2;
             FadeIn(bad1);
             FadeIn(bad2);
             point = false;
@@ -110,7 +110,7 @@ public class SceneManage1_4Score : SceneBase
     {
         if (timer < 2.5 && point)
         {
-            ManagerScript.score -= 3;
+            ManagerScript.chapter1_score -= 3;
             FadeIn(bad1);
             FadeIn(bad2);
             FadeIn(bad3);
