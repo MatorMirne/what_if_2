@@ -5,15 +5,15 @@ using UnityEngine.SceneManagement;
 
 public class SceneManage2_1 : MonoBehaviour
 {
-    public GameObject[] gauge = new GameObject[5];
+    public GameObject temperature;
     float timer, fixedTimer = 0;
-    int curGauge = 0;
     float multiplier = 1;
+    Vector2 pos;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        pos = temperature.transform.position;
     }
 
     // Update is called once per frame
@@ -44,42 +44,15 @@ public class SceneManage2_1 : MonoBehaviour
                 break;
         }
 
-        if(timer > 1 && timer < 2)
+        if (pos.y >= -1.5)
         {
-            gauge[0].SetActive(true);
-            curGauge = 1;
-        }
-        if(timer > 2 && timer < 3)
-        {
-            gauge[1].SetActive(true);
-            curGauge = 2;
-        }
-        if (timer > 3 && timer < 4)
-        {
-            gauge[2].SetActive(true);
-            curGauge = 3;
-        }
-        if (timer > 4 && timer < 5)
-        {
-            gauge[3].SetActive(true);
-            curGauge = 4;
-        }
-        if (timer > 5 && timer < 6)
-        {
-            gauge[4].SetActive(true);
-            curGauge = 5;
+            multiplier = 0;
         }
 
-        if(PlugOnScript.plugOnNum <= 3 && curGauge >= 4)
-        {
-            gauge[3].SetActive(false);
-            gauge[4].SetActive(false);
-        }
+        Debug.Log(pos.x + " " + pos.y);
+        temperature.transform.position = new Vector2(pos.x, pos.y + 0.0007f * multiplier);
+        pos = temperature.transform.position;
 
-        if(curGauge == 5 && fixedTimer > 7)
-        {
-            //  성공 or 실패 전부 여기서 loadscene
-            Debug.Log("game over!");
-        }
+
     }
 }
