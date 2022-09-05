@@ -24,7 +24,7 @@ public class SceneManager1_6_2 : MonoBehaviour
         if (create_road_timer > 1.97f)
         {
             //Debug.Log("货肺款 road 积己");
-            GameObject road_ = Instantiate(road_base);
+            Instantiate(road_base);
             create_road_timer = 0;
         }
     }
