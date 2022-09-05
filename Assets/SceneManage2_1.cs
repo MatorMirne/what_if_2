@@ -53,6 +53,9 @@ public class SceneManage2_1 : MonoBehaviour
         temperature.transform.position = new Vector2(pos.x, pos.y + 0.0007f * multiplier);
         pos = temperature.transform.position;
 
-
+        if(fixedTimer > 7)
+        {
+            Debug.Log("to next scene");
+        }
     }
 }
