@@ -20,7 +20,7 @@ public class roadScript1_6_2 : MonoBehaviour
 
         if(transform.position.y< -9.87f)
         {
-            Debug.Log(time);
+            //Debug.Log(time);
             Destroy(gameObject);
         }
     }
