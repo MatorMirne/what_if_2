@@ -31,6 +31,6 @@ public class SceneManager1_6_2 : MonoBehaviour
 
     public void GameOver()
     {
-        Debug.Log("Game Over ...");
+        //Debug.Log("Game Over ...");
     }
 }

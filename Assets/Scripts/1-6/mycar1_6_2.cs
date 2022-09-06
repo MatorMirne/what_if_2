@@ -1,20 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.EventSystems;
+//using UnityEngine.EventSystems;
 
-public class mycar1_6_2 : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDragHandler
+public class mycar1_6_2 : MonoBehaviour//, IBeginDragHandler, IEndDragHandler, IDragHandler
 {
     public GameObject scenemanager;
     public GameObject car1, car2;
 
-    Vector2 pos_start;
-
-
+    private bool drag;
 
     void Start()
     {
-        
+        drag = false;
     }
 
     void Update()
@@ -23,8 +21,26 @@ public class mycar1_6_2 : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDr
         {
             scenemanager.GetComponent<SceneManager1_6_2>().GameOver();
         }
+
+        if (drag)
+        {
+            Vector2 pos_mouse = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
+            pos_mouse = new Vector2(0, pos_mouse.y);
+            transform.Translate(pos_mouse);
+        }
     }
 
+    void OnMouseUp()
+    {
+        drag = false;
+    }
+
+    void OnMouseDown()
+    {
+        drag = true;
+    }
+
+    /*
     public void OnBeginDrag(PointerEventData eventData)
     {
         Debug.Log("드래그");
@@ -39,4 +55,5 @@ public class mycar1_6_2 : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDr
     {
         Debug.Log("드래끝");
     }
+    */
 }
