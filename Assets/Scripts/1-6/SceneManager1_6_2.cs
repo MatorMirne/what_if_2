@@ -1,10 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class SceneManager1_6_2 : MonoBehaviour
 {
     public GameObject road_base;
+    public string good_scene;
+    public string bad_scene;
 
     public bool gameover;
     float time;
@@ -31,6 +34,11 @@ public class SceneManager1_6_2 : MonoBehaviour
 
     public void GameOver()
     {
-        //Debug.Log("Game Over ...");
+        SceneManager.LoadScene("1-6ScoreBad");
+    }
+
+    public void GameClear()
+    {
+        SceneManager.LoadScene("1-6ScoreGood");
     }
 }

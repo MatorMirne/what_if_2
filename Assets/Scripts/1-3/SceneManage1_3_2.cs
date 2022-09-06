@@ -26,13 +26,12 @@ public class SceneManage1_3_2 : SceneBase
     {
         time += Time.deltaTime;
 
-
-        if (time > 1f)
+        if (time > 2f)
         {
             background.GetComponent<SpriteRenderer>().sprite = background2;
         }
 
-        if (time > 2f&& point1)
+        if (time > 4f&& point1)
         {
             point1 = false;
             FadeIn(choice1);

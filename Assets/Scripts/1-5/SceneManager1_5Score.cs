@@ -13,8 +13,6 @@ public class SceneManager1_5Score : SceneBase
 
     private void Start()
     {
-        ManagerScript.data_1_5 = 2;
-
         if (ManagerScript.data_1_5 == 0)
         {
             // Clear!
@@ -37,7 +35,6 @@ public class SceneManager1_5Score : SceneBase
                 FadeIn(elec.transform.GetChild(i).gameObject);
             }
         }
-        
     }
 
     void Update()
