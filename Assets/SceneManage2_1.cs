@@ -8,6 +8,7 @@ public class SceneManage2_1 : MonoBehaviour
     public GameObject temperature;
     float timer, fixedTimer = 0;
     float multiplier = 1;
+    bool goodEnd = false;
     Vector2 pos;
 
     // Start is called before the first frame update
@@ -44,17 +45,22 @@ public class SceneManage2_1 : MonoBehaviour
                 break;
         }
 
-        if (pos.y >= -1.5)
+        if (pos.y >= -1.5 && PlugOnScript.plugOnNum <= 3)
         {
             multiplier = 0;
+            goodEnd = true;
         }
 
         Debug.Log(pos.x + " " + pos.y);
         temperature.transform.position = new Vector2(pos.x, pos.y + 0.0007f * multiplier);
         pos = temperature.transform.position;
 
-        if(fixedTimer > 7)
+        if(fixedTimer > 7 || pos.y >= -0.2)
         {
+            if(fixedTimer < 7)
+            {
+                goodEnd = true;
+            }
             Debug.Log("to next scene");
         }
     }

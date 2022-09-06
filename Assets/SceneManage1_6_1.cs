@@ -21,17 +21,13 @@ public class SceneManage1_6_1 : MonoBehaviour
 
         if(timer > 2.5 && timer < 3)
         {
-            head.SetActive(true);
+            lookUp.SetActive(true);
         }
         if(timer > 5 && timer < 5.5)
         {
-            lookUp.SetActive(true);
-        }
-        if(timer > 7.5 && timer < 8)
-        {
             headMes.SetActive(true);
         }
-        if(timer > 10)
+        if(timer > 5)
         {
             //  다음 scene으로
             Debug.Log("to next scene");
