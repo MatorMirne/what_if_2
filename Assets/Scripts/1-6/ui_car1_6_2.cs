@@ -26,7 +26,7 @@ public class ui_car1_6_2 : MonoBehaviour
 
             if (time>11f)
             {
-                Debug.Log("Game Clear !");  
+                scenemanager.GetComponent<SceneManager1_6_2>().GameClear();
             }
         }
     }

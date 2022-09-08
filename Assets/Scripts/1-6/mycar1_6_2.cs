@@ -40,20 +40,4 @@ public class mycar1_6_2 : MonoBehaviour//, IBeginDragHandler, IEndDragHandler, I
         drag = true;
     }
 
-    /*
-    public void OnBeginDrag(PointerEventData eventData)
-    {
-        Debug.Log("드래그");
-    }
-
-    public void OnDrag(PointerEventData eventData)
-    {
-        Debug.Log("드래깅");
-    }
-
-    public void OnEndDrag(PointerEventData eventData)
-    {
-        Debug.Log("드래끝");
-    }
-    */
 }

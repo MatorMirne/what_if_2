@@ -6,8 +6,6 @@ using UnityEngine.SceneManagement;
 public class SceneManager1_6_2 : MonoBehaviour
 {
     public GameObject road_base;
-    public string good_scene;
-    public string bad_scene;
 
     public bool gameover;
     float time;
