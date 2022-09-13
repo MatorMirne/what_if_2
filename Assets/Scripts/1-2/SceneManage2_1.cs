@@ -10,6 +10,8 @@ public class SceneManage2_1 : MonoBehaviour
     public GameObject temperature, fire;
     float timer, fixedTimer = 0;
     float multiplier = 1;
+
+    float time_gameover = 0;
     Vector2 pos;
 
     // Start is called before the first frame update
@@ -43,6 +45,8 @@ public class SceneManage2_1 : MonoBehaviour
                 break;
             case 0:
                 multiplier = 0;
+                goodEnd = true;
+                SceneManager.LoadScene("2-1Score");
                 break;
         }
 
@@ -55,6 +59,7 @@ public class SceneManage2_1 : MonoBehaviour
         if(fixedTimer > 7 && pos.y < -0.2)
         {
             goodEnd = true;
+            SceneManager.LoadScene("2-1Score");
             Debug.Log("to next scene");
         }
         if(pos.y >= -0.2)
@@ -62,7 +67,17 @@ public class SceneManage2_1 : MonoBehaviour
             fire.SetActive(true);
             multiplier = 0;
             Debug.Log("bad end");
-            //  Àç½ÃÀÛ?
+            ManagerScript.chapter2_score--;
+            ManagerScript.chapter2_1score = false;
+            time_gameover = timer;
+        }
+
+        if(time_gameover != 0)
+        {
+            if(timer> time_gameover + 2)
+            {
+                SceneManager.LoadScene("2-1Score");
+            }
         }
 
         Debug.Log(pos.x + " " + pos.y);

@@ -4,25 +4,15 @@ using UnityEngine;
 
 public class TapScript : MonoBehaviour
 {
-    public GameObject tapOn;
+    public Sprite wateron;
     public bool isOn = false;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
     private void OnMouseDown()
     {
-        gameObject.SetActive(false);
-        tapOn.SetActive(true);
+        gameObject.GetComponent<SpriteRenderer>().sprite = wateron;
         isOn = true;
+        ManagerScript.chapter2_2score = false;
+        ManagerScript.chapter2_score--;
     }
 }

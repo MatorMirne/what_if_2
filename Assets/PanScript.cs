@@ -15,13 +15,6 @@ public class PanScript : MonoBehaviour
     public GameObject mayo, tap;
     public GameObject su, surSu;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
     void Update()
     {
         timer += Time.deltaTime;
@@ -55,7 +48,7 @@ public class PanScript : MonoBehaviour
         }
         if(timer > 1.7 && isEnd)
         {
-            //  score·Î
+            SceneManager.LoadScene("2-2Score");
         }
     }
 }

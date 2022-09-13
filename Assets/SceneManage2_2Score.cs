@@ -10,13 +10,7 @@ public class SceneManage2_2Score : SceneBase
     float timer = 0;
     bool point = false;
 
-    // Start is called before the first frame update
-    void Start()
-    {
 
-    }
-
-    // Update is called once per frame
     void Update()
     {
         timer += Time.deltaTime;
@@ -47,11 +41,11 @@ public class SceneManage2_2Score : SceneBase
         {
             if (PanScript.isGood)
             {
-                //  다음 씬으로
+                SceneManager.LoadScene("2-3-1");
             }
             else
             {
-                //  2-2로 돌아감
+                SceneManager.LoadScene("2-2");
             }
         }
     }

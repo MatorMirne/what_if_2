@@ -9,20 +9,13 @@ public class SceneManage2_3_1 : MonoBehaviour
 
     float timer = 0;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
     void Update()
     {
         timer += Time.deltaTime;
 
         if(timer > 4)
         {
-            //  ´ÙÀ½ ¾ÀÀ¸·Î
+            SceneManager.LoadScene("2-3-2");
         }
         else if(timer > 1.5)
         {
