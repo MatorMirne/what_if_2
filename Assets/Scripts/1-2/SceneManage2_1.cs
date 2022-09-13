@@ -5,10 +5,11 @@ using UnityEngine.SceneManagement;
 
 public class SceneManage2_1 : MonoBehaviour
 {
+    public static bool goodEnd = false;
+
     public GameObject temperature, fire;
     float timer, fixedTimer = 0;
     float multiplier = 1;
-    bool goodEnd = false;
     Vector2 pos;
 
     // Start is called before the first frame update
