@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.SocialPlatforms.Impl;
 using UnityEngine.UI;
 
@@ -18,6 +19,7 @@ public class SceneManagerChapter1Score : MonoBehaviour
     public GameObject score;
 
     float time = 0;
+    bool end = false;
 
     void Update()
     {
@@ -90,6 +92,15 @@ public class SceneManagerChapter1Score : MonoBehaviour
         {
             score.GetComponent<Text>().text = ManagerScript.chapter1_score.ToString();
             score.SetActive(true);
+            end = true;
+        }
+    }
+
+    public void End()
+    {
+        if (end)
+        {
+            SceneManager.LoadScene("2-1-1");
         }
     }
 }

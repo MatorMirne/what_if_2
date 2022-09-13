@@ -10,5 +10,6 @@ public class choice_bad_1_3 : MonoBehaviour
         Instantiate(error_message);
         ManagerScript.chapter1_score--;
         Debug.Log("(스코어 -1) " + "현재 스코어:" + ManagerScript.chapter1_score);
+        ManagerScript.chapter1_3score = false;
     }
 }

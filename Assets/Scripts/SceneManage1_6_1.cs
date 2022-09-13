@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class SceneManage1_6_1 : MonoBehaviour
 {
@@ -23,14 +24,15 @@ public class SceneManage1_6_1 : MonoBehaviour
         {
             lookUp.SetActive(true);
         }
-        if(timer > 5 && timer < 5.5)
+        if(timer > 4 && timer < 5.5)
         {
             headMes.SetActive(true);
         }
-        if(timer > 5)
+        if(timer > 6)
         {
             //  다음 scene으로
             Debug.Log("to next scene");
+            SceneManager.LoadScene("1-6-2");
         }
     }
 }

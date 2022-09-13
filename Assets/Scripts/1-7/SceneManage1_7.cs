@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class SceneManage1_7 : SceneBase
 {
@@ -38,6 +39,7 @@ public class SceneManage1_7 : SceneBase
             if(timer > 6 && timer < 7 && isFoggy)
             {
                 //game over
+                ManagerScript.chapter1_7score = false;
             }
 
             //  2Â÷ ±è¼­¸²
@@ -57,6 +59,7 @@ public class SceneManage1_7 : SceneBase
             if (timer > 13 && timer < 14 && isFoggy)
             {
                 //game over
+                ManagerScript.chapter1_7score = false;
             }
 
             //  3Â÷ ±è¼­¸²
@@ -75,12 +78,14 @@ public class SceneManage1_7 : SceneBase
             }
             if (timer > 20 && timer < 21 && isFoggy)
             {
+                ManagerScript.chapter1_7score = false;
                 //game over
             }
 
             if(timer > 22)
             {
                 //stage clear
+                SceneManager.LoadScene("1-7ScoreGood");
             }
         }
     }

@@ -504,7 +504,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   content: {fileID: 2065782567}
-  next_scene: 1-7-1
+  next_scene: 1-7
   num_content: 2
 --- !u!1 &2065782567
 GameObject:

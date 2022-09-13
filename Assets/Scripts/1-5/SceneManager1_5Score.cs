@@ -30,7 +30,7 @@ public class SceneManager1_5Score : SceneBase
         }
         else if (ManagerScript.data_1_5 == 2)
         {
-            for(int i=0; i<5; i++)
+            for(int i=0; i<4; i++)
             {
                 FadeIn(elec.transform.GetChild(i).gameObject);
             }
@@ -61,7 +61,7 @@ public class SceneManager1_5Score : SceneBase
             }
             else if (ManagerScript.data_1_5 == 2)
             {
-                for (int i = 0; i < 5; i++)
+                for (int i = 0; i < 4; i++)
                 {
                     FadeOut(elec.transform.GetChild(i).gameObject);
                 }

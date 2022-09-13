@@ -16,10 +16,12 @@ public class SceneManage1_4Score : SceneBase
         if (!GasScript.isOff)
         {
             ManagerScript.chapter1_score--;
-            if (!LightScript.isOn)
-            {
-                ManagerScript.chapter1_score--;
-            }
+            ManagerScript.chapter1_4score = false;
+        }
+        if (!LightScript.isOn)
+        {
+            ManagerScript.chapter1_score--;
+            ManagerScript.chapter1_4score = false;
         }
     }
 
