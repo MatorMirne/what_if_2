@@ -5,12 +5,15 @@ using UnityEngine.SceneManagement;
 
 public class PanScript : MonoBehaviour
 {
+    public static bool isGood = false;
+
     float timer = 0;
     bool isGaming = false;
     bool isEnd = false;
 
     public GameObject beforeFire, fireOff, fireOn, fireBig;
     public GameObject mayo, tap;
+    public GameObject su, surSu;
 
     // Start is called before the first frame update
     void Start()
@@ -24,6 +27,8 @@ public class PanScript : MonoBehaviour
         timer += Time.deltaTime;
         if(timer > 1.7 && !isGaming && !isEnd)
         {
+            su.SetActive(false);
+            surSu.SetActive(true);
             beforeFire.GetComponent<SpriteRenderer>().enabled = false;
             fireOn.SetActive(true);
             isGaming = true;
@@ -45,20 +50,12 @@ public class PanScript : MonoBehaviour
                 fireOff.SetActive(true);
                 isEnd = true;
                 timer = 0;
+                isGood = true;
             }
         }
         if(timer > 1.7 && isEnd)
         {
-            if (tap.GetComponent<TapScript>().isOn)
-            {
-                Debug.Log("다시시작");
-                //  게임 다시 시작
-            }
-            else if (mayo.GetComponent<MayoScript>().isPour)
-            {
-                Debug.Log("다음 스테이지로");
-                //  다음 스테이지로
-            }
+            //  score로
         }
     }
 }
