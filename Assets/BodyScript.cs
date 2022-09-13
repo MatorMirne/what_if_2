@@ -6,15 +6,18 @@ public class BodyScript : MonoBehaviour
 {
     public GameObject speeder;
     public Vector2 offset;
+    public bool isFalling = true;
 
+    bool isInPosition = false;
     bool isCollide = false;
     bool isDragging = false;
-    Vector2 corPos = new Vector2(1.97f, 3.09f);
+    Vector2 corPos = new Vector2(0.74f, 3.09f);
+    Vector2 pos;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        pos = corPos;
     }
 
     // Update is called once per frame
@@ -30,8 +33,23 @@ public class BodyScript : MonoBehaviour
         }
         if (isCollide)
         {
+            if (!isInPosition)
+            {
+                isInPosition = true;
+                transform.position = corPos;
+            }
             gameObject.GetComponent<SpriteRenderer>().sortingLayerName = "Background";
             gameObject.GetComponent<SpriteRenderer>().sortingOrder = 1;
+
+            transform.position = new Vector2(pos.x, pos.y - 0.008f);
+            if (pos.y >= 1.22)
+            {
+                pos = transform.position;
+            }
+            else
+            {
+                isFalling = false;
+            }
         }
     }
 
@@ -50,7 +68,6 @@ public class BodyScript : MonoBehaviour
         {
             Debug.Log("collision");
             isCollide = true;
-            transform.position = corPos;
         }
     }
 }
