@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class SceneManage2_1 : MonoBehaviour
 {
-    public GameObject temperature;
+    public GameObject temperature, fire;
     float timer, fixedTimer = 0;
     float multiplier = 1;
     bool goodEnd = false;
@@ -51,17 +51,21 @@ public class SceneManage2_1 : MonoBehaviour
             goodEnd = true;
         }
 
+        if(fixedTimer > 7 && pos.y < -0.2)
+        {
+            goodEnd = true;
+            Debug.Log("to next scene");
+        }
+        if(pos.y >= -0.2)
+        {
+            fire.SetActive(true);
+            multiplier = 0;
+            Debug.Log("bad end");
+            //  Àç½ÃÀÛ?
+        }
+
         Debug.Log(pos.x + " " + pos.y);
         temperature.transform.position = new Vector2(pos.x, pos.y + 0.0007f * multiplier);
         pos = temperature.transform.position;
-
-        if(fixedTimer > 7 || pos.y >= -0.2)
-        {
-            if(fixedTimer < 7)
-            {
-                goodEnd = true;
-            }
-            Debug.Log("to next scene");
-        }
     }
 }
