@@ -43,6 +43,7 @@ public class timer1_2_1 : MonoBehaviour
         }
 
         Debug.Log("Time Over !");
+        ManagerScript.chapter1_2score = false;
         TimeOver();
     }
 

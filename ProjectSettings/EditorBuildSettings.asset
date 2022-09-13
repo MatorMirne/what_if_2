@@ -90,6 +90,12 @@ EditorBuildSettings:
     path: Assets/Scenes/1-6ScoreGood.unity
     guid: d10ccae36615e2546a86fd40a684583e
   - enabled: 1
+    path: Assets/Scenes/1-7.unity
+    guid: e81be7fcaa003674b9cd79b59c1695ff
+  - enabled: 1
     path: Assets/Scenes/1-7ScoreGood.unity
     guid: fce9609ff4e72424fafa7974054e3c1e
+  - enabled: 1
+    path: Assets/Scenes/Chapter1Score.unity
+    guid: 1067529d9f361bc4e8fe6922db6a75c7
   m_configObjects: {}

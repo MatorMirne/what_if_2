@@ -32,6 +32,7 @@ public class SceneManager1_6_2 : MonoBehaviour
 
     public void GameOver()
     {
+        ManagerScript.chapter1_6score = false;
         SceneManager.LoadScene("1-6ScoreBad");
     }
 
