@@ -43,6 +43,7 @@ public class Walking : MonoBehaviour
         }
 
         wangWalk1.transform.position = new Vector2(pos.x - 0.0009f, pos.y);
+
         if(pos.x >= 1.13)
         {
             pos = wangWalk1.transform.position;

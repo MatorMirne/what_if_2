@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class SafePinScript : MonoBehaviour
 {
+    public GameObject scenemanager;
     public GameObject fireExt;
 
     Vector3 pos = Vector3.zero;
@@ -11,13 +12,9 @@ public class SafePinScript : MonoBehaviour
 
     bool isClicked = false;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
+
+
     void Update()
     {
         timer += Time.deltaTime;
@@ -52,6 +49,7 @@ public class SafePinScript : MonoBehaviour
         {
             pos.x = 1;
             transform.position -= pos;
+            scenemanager.GetComponent<SceneManage2_4_2>().GameClear();
         }
     }
 

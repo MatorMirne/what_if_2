@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class SceneManage2_3Score : SceneBase
 {
@@ -33,7 +34,7 @@ public class SceneManage2_3Score : SceneBase
 
         if (timer > 4)
         {
-            //  ¥Ÿ¿Ω æ¿¿∏∑Œ
+            SceneManager.LoadScene("2-4-1");
         }
     }
 }

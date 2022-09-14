@@ -1,21 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class cigarOffScript : MonoBehaviour
 {
     public GameObject trashCan, lightOff;
+    public string next_scene;
 
     bool isDragging = false;
     public Vector2 offset;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
     void Update()
     {
         if (isDragging)
@@ -28,7 +23,9 @@ public class cigarOffScript : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
             Debug.Log("success!");
-            lightOff.SetActive(false);
+        gameObject.GetComponent<SpriteRenderer>().enabled = false;
+
+        StartCoroutine(NextScene(2));
     }
 
     private void OnMouseDown()
@@ -38,5 +35,16 @@ public class cigarOffScript : MonoBehaviour
     private void OnMouseUp()
     {
         isDragging = false;
+    }
+
+    IEnumerator NextScene(float deadline)
+    {
+        float time = 0;
+        while (time < deadline)
+        {
+            time += Time.deltaTime;
+            yield return null;
+        }
+        SceneManager.LoadScene(next_scene);
     }
 }

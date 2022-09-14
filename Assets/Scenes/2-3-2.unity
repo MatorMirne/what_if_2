@@ -487,6 +487,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   trashCan: {fileID: 1754330208}
   lightOff: {fileID: 868361184}
+  next_scene: 2-3Score
   offset: {x: 0, y: 0.95}
 --- !u!50 &868361189
 Rigidbody2D:

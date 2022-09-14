@@ -5,20 +5,14 @@ using UnityEngine.SceneManagement;
 
 public class ToNext2_4 : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    public GameObject Walk;
 
     private void OnMouseDown()
     {
-        //  to next scene
+        if (Walk.GetComponent<Walking>().isGaming)
+        {
+            SceneManager.LoadScene("2-4-2");
+        }
+
     }
 }

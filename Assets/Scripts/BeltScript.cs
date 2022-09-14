@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class BeltScript : SceneBase
 {
@@ -11,13 +12,9 @@ public class BeltScript : SceneBase
     bool isCollide = false;
     float timer = 0;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    
 
-    // Update is called once per frame
+
     void Update()
     {
         if (!body.GetComponent<BodyScript>().isFalling)
@@ -38,6 +35,7 @@ public class BeltScript : SceneBase
                 if(timer > 3)
                 {
                     //  ´ÙÀ½ ¾ÀÀ¸·Î
+                    SceneManager.LoadScene("2-5-3");
                 }
                 else if(timer > 1.5)
                 {
