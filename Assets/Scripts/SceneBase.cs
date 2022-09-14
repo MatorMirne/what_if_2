@@ -45,4 +45,5 @@ public class SceneBase : MonoBehaviour
         }
         _gameObject.SetActive(false);
     }
+
 }
