@@ -490,7 +490,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   time: 1.8
-  next_scene: 
+  next_scene: 1-1-4
   timer: 0
 --- !u!114 &1854243351
 MonoBehaviour:
