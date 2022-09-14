@@ -68,20 +68,29 @@ public class SceneManage2_1 : MonoBehaviour
             multiplier = 0;
             Debug.Log("bad end");
             ManagerScript.chapter2_score--;
+            if (ManagerScript.chapter2_1score)
+            {
+                StartCoroutine(GameOver());
+            }
             ManagerScript.chapter2_1score = false;
             time_gameover = timer;
+
+            
         }
 
-        if(time_gameover != 0)
-        {
-            if(timer> time_gameover + 2)
-            {
-                SceneManager.LoadScene("2-1Score");
-            }
-        }
+        
 
         Debug.Log(pos.x + " " + pos.y);
         temperature.transform.position = new Vector2(pos.x, pos.y + 0.009f * multiplier);
         pos = temperature.transform.position;
+    }
+
+    IEnumerator GameOver()
+    {
+        yield return new WaitForSeconds(1f);
+
+        SceneManager.LoadScene("2-1Score");
+            
+        
     }
 }
