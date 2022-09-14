@@ -11,4 +11,5 @@ public class StartScript : MonoBehaviour
         Debug.Log("Start!");
         SceneManager.LoadScene("1-1-1");
     }
+
 }

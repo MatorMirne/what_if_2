@@ -8,16 +8,15 @@ public class FireExtScript : MonoBehaviour
 
     public bool isFloat = true;
     public bool isDragging = false;
-    public Vector2 offset;
     public Vector2 mousePosition;
+    Vector2 startPosition;
+    Vector2 mouseStartPosition;
 
-    Vector2 pos;
     Collider2D collider;
 
     // Start is called before the first frame update
     void Start()
     {
-        pos = transform.position;
         collider = GetComponent<Collider2D>();
     }
 
@@ -26,12 +25,12 @@ public class FireExtScript : MonoBehaviour
     {
         if (isDragging)
         {
-            mousePosition = (Vector2)Camera.main.ScreenToWorldPoint(Input.mousePosition) - (Vector2)transform.position + offset;
-            transform.Translate(mousePosition);
-            pos = transform.position;
+            mousePosition = (Vector2)Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            Vector2 position = mousePosition - mouseStartPosition + startPosition;
+            transform.position = position;
         }
 
-        if (pos.y <= -2)
+        if (transform.position.y <= -2)
         {
             isDragging = false;
             collider.enabled = false;
@@ -41,6 +40,11 @@ public class FireExtScript : MonoBehaviour
 
     private void OnMouseDown()
     {
+        if (!isDragging)
+        {
+            startPosition = transform.position;
+            mouseStartPosition = (Vector2)Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        }
         isDragging = true;
     }
 
