@@ -15,7 +15,7 @@ public class WaterRoom : MonoBehaviour
     void FixedUpdate()
     {
         Debug.Log(pos.x + " " + pos.y);
-        transform.position = new Vector2(pos.x, pos.y + 0.0007f);
+        transform.position = new Vector2(pos.x, pos.y + 0.01f);
         pos = transform.position;
     }
 }

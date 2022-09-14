@@ -82,7 +82,7 @@ public class SceneManage1_2_1 : MonoBehaviour
         temp = big_elec_transform.position;
         while (big_elec_transform.position.y < 1.07f)
         {
-            count += 0.1f;
+            count += 0.3f;
             big_elec_transform.position = temp + new Vector2(0, count);
             yield return new WaitForSeconds(0.01f);
         }
@@ -105,7 +105,7 @@ public class SceneManage1_2_1 : MonoBehaviour
         temp = big_elec_transform.position;
         while (big_elec_transform.position.y > -5.04f)
         {
-            count += 0.1f;
+            count += 0.3f;
             big_elec_transform.position = temp - new Vector2(0, count);
             yield return new WaitForSeconds(0.01f);
         }
