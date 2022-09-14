@@ -42,7 +42,7 @@ public class Walking : MonoBehaviour
             suWalk2.SetActive(true);
         }
 
-        wangWalk1.transform.position = new Vector2(pos.x - 0.0009f, pos.y);
+        wangWalk1.transform.position = new Vector2(pos.x - 0.017f, pos.y);
 
         if(pos.x >= 1.13)
         {

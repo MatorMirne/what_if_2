@@ -16,7 +16,7 @@ public class WangDescend : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        transform.position = new Vector2(pos.x, pos.y - 0.01f);
+        transform.position = new Vector2(pos.x, pos.y - 0.08f);
         pos = transform.position;
 
         if(pos.y <= -5.9)

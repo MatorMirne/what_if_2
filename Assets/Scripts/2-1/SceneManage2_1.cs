@@ -81,7 +81,7 @@ public class SceneManage2_1 : MonoBehaviour
         }
 
         Debug.Log(pos.x + " " + pos.y);
-        temperature.transform.position = new Vector2(pos.x, pos.y + 0.0007f * multiplier);
+        temperature.transform.position = new Vector2(pos.x, pos.y + 0.009f * multiplier);
         pos = temperature.transform.position;
     }
 }
