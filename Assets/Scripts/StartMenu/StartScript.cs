@@ -3,14 +3,20 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class StartScript : MonoBehaviour
+public class StartScript : SceneBase
 {
-    // Start is called before the first frame update
+    public GameObject all;
+    
     private void OnMouseDown()
     {
-        Debug.Log("Start!");
-        SceneManager.LoadScene("1-1-1");
+        FadeOut(all);
+        StartCoroutine(WaitThis());
+
     }
 
-
+    IEnumerator WaitThis()
+    {
+        yield return new WaitForSeconds(2f);
+        SceneManager.LoadScene("1-1-1");
+    }
 }

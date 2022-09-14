@@ -405,6 +405,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4259d278e607fdb4996f9da9737dbf57, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  all: {fileID: 332810548}
 --- !u!61 &654212022
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -517,6 +518,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a25bf443099ab1408693144029a8870, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  all: {fileID: 332810548}
 --- !u!1 &1925229379
 GameObject:
   m_ObjectHideFlags: 0
@@ -527,6 +529,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1925229381}
   - component: {fileID: 1925229380}
+  - component: {fileID: 1925229382}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -561,6 +564,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1925229382
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1925229379}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5565d4d15403acf468f3dec58fdaa555, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2012271213
 GameObject:
   m_ObjectHideFlags: 0
