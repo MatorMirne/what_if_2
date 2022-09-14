@@ -132,6 +132,9 @@ EditorBuildSettings:
     path: Assets/Scenes/2-4-2.unity
     guid: bb2257c42eb72b841959cccc2e1033c2
   - enabled: 1
+    path: Assets/Scenes/2-4Score.unity
+    guid: 92104b3515ef05d4987c6b12d720e5f3
+  - enabled: 1
     path: Assets/Scenes/2-5-1.unity
     guid: 354b76222d828674d99c5e02cf61e04c
   - enabled: 1
