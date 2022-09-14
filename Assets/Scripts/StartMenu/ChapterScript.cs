@@ -7,6 +7,6 @@ public class ChapterScript : MonoBehaviour
 {
     private void OnMouseDown()
     {
-        Debug.Log("ChapterSelect");
+        SceneManager.LoadScene("2-1-1");
     }
 }
