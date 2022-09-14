@@ -21,7 +21,7 @@ public class SceneManage2_1 : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         timer += Time.deltaTime * multiplier;
         fixedTimer += Time.deltaTime;

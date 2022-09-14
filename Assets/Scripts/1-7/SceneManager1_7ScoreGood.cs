@@ -25,7 +25,7 @@ public class SceneManager1_7ScoreGood : SceneBase
         point1 = true;
     }
 
-    void Update()
+    void FixedUpdate()
     {
         time += Time.deltaTime;
 

@@ -15,7 +15,7 @@ public class other_car1_6_2 : MonoBehaviour
         point2 = point3 = point4 = false;
     }
 
-    void Update()
+    void FixedUpdate()
     {
         time += Time.deltaTime;
 

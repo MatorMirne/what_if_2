@@ -12,7 +12,7 @@ public class WaterRoom : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         Debug.Log(pos.x + " " + pos.y);
         transform.position = new Vector2(pos.x, pos.y + 0.0007f);

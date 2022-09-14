@@ -14,7 +14,7 @@ public class WangDescend : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         transform.position = new Vector2(pos.x, pos.y - 0.01f);
         pos = transform.position;

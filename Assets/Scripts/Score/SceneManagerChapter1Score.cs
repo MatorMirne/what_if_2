@@ -21,7 +21,7 @@ public class SceneManagerChapter1Score : MonoBehaviour
     float time = 0;
     bool end = false;
 
-    void Update()
+    void FixedUpdate()
     {
         time += Time.deltaTime;
 

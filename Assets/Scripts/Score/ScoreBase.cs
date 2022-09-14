@@ -29,7 +29,7 @@ public class ScoreBase : SceneBase
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         time += Time.deltaTime;
 

@@ -11,7 +11,7 @@ public class cigarOffScript : MonoBehaviour
     bool isDragging = false;
     public Vector2 offset;
 
-    void Update()
+    void FixedUpdate()
     {
         if (isDragging)
         {
@@ -39,12 +39,9 @@ public class cigarOffScript : MonoBehaviour
 
     IEnumerator NextScene(float deadline)
     {
-        float time = 0;
-        while (time < deadline)
-        {
-            time += Time.deltaTime;
-            yield return null;
-        }
+        
+            yield return new WaitForSeconds(deadline);
+        
         SceneManager.LoadScene(next_scene);
     }
 }

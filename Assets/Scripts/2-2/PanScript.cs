@@ -15,7 +15,7 @@ public class PanScript : MonoBehaviour
     public GameObject mayo, tap;
     public GameObject su, surSu;
 
-    void Update()
+    void FixedUpdate()
     {
         timer += Time.deltaTime;
         if(timer > 1.7 && !isGaming && !isEnd)

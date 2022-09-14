@@ -11,7 +11,7 @@ public class SceneManage1_2Score : SceneBase
     bool repeat = true;
     float timer = 0;
 
-    void Update()
+    void FixedUpdate()
     {
         timer += Time.deltaTime;
 

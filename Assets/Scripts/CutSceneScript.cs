@@ -9,7 +9,7 @@ public class CutSceneScript : MonoBehaviour
     public string next_scene;
 
     public float timer = 0; //현재 시간
-    private void Update()
+    private void FixedUpdate()
     {
         timer += Time.deltaTime;
 

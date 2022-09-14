@@ -9,7 +9,7 @@ public class SceneManage2_3_1 : MonoBehaviour
 
     float timer = 0;
 
-    void Update()
+    void FixedUpdate()
     {
         timer += Time.deltaTime;
 

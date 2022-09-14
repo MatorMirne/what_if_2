@@ -14,11 +14,9 @@ public class OpenBoxScript : MonoBehaviour
         pos = belt.transform.position;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+ 
+
+
 
     private void OnMouseDown()
     {

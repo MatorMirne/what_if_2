@@ -17,7 +17,7 @@ public class SceneManager1_6_2 : MonoBehaviour
         gameover = false;
     }
 
-    void Update()
+    void FixedUpdate()
     {
         time += Time.deltaTime;
         create_road_timer += Time.deltaTime;

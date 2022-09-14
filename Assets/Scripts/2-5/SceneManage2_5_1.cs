@@ -9,14 +9,11 @@ public class SceneManage2_5_1 : MonoBehaviour
 
     float timer = 0;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
+
+
+
+    void FixedUpdate()
     {
         timer += Time.deltaTime;
 

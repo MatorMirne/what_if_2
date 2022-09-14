@@ -15,7 +15,7 @@ public class mycar1_6_2 : MonoBehaviour//, IBeginDragHandler, IEndDragHandler, I
         drag = false;
     }
 
-    void Update()
+    void FixedUpdate()
     {
         if (Vector2.Distance(car1.transform.position, transform.position) < 3.5f)
         {

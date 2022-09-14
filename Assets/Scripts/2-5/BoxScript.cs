@@ -5,17 +5,9 @@ using UnityEngine;
 public class BoxScript : MonoBehaviour
 {
     public GameObject boxOpen, belt, speeder, body;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+
+
 
     private void OnMouseDown()
     {

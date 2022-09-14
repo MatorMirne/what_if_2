@@ -14,17 +14,6 @@ public class MultiPlug : MonoBehaviour
         spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
     }
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
     private void OnMouseDown()
     {

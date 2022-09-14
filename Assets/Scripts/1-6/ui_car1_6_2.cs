@@ -17,7 +17,7 @@ public class ui_car1_6_2 : MonoBehaviour
         time = 0;
     }
 
-    void Update()
+    void FixedUpdate()
     {
         if (!scenemanager.GetComponent<SceneManager1_6_2>().gameover)
         {

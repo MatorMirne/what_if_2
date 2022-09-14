@@ -37,7 +37,7 @@ public class SceneManager1_5Score : SceneBase
         }
     }
 
-    void Update()
+    void FixedUpdate()
     {
         time += Time.deltaTime;
 

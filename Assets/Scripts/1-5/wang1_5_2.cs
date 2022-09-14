@@ -23,7 +23,7 @@ public class wang1_5_2 : MonoBehaviour
         dead = false;
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
         time += Time.deltaTime;
         walk_time += Time.deltaTime;
@@ -111,13 +111,9 @@ public class wang1_5_2 : MonoBehaviour
 
         IEnumerator GameOver()
         {
-            float game_over_timer = 0;
-
-            while (game_over_timer < 1f)
-            {
-                game_over_timer += 0.01f;
-                yield return new WaitForSeconds(0.01f);
-            }
+            
+                yield return new WaitForSeconds(1f);
+            
 
             scenemanager.GetComponent<SceneManager1_5_2>().GameOver();
         }

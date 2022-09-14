@@ -15,7 +15,7 @@ public class BeltScript : SceneBase
     
 
 
-    void Update()
+    void FixedUpdate()
     {
         if (!body.GetComponent<BodyScript>().isFalling)
         {

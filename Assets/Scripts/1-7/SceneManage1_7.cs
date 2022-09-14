@@ -9,14 +9,11 @@ public class SceneManage1_7 : SceneBase
     float timer = 0;
     bool isFoggy = false;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
+
+
+
+    void FixedUpdate()
     {
         if (lever.GetComponent<LeverScript>().isLight)
         {

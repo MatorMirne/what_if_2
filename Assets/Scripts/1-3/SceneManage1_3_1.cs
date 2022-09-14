@@ -8,14 +8,10 @@ public class SceneManage1_3_1 : MonoBehaviour
     public GameObject sleep, phoneOff, phoneOn, background;
     float timer = 0;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
+
+
+    void FixedUpdate()
     {
         timer += Time.deltaTime;
         if(timer > 1.5 && timer <= 3)

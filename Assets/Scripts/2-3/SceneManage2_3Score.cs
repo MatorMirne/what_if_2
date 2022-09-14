@@ -10,14 +10,10 @@ public class SceneManage2_3Score : SceneBase
     float timer = 0;
     bool point = false;
 
-    // Start is called before the first frame update
-    void Start()
-    {
 
-    }
 
-    // Update is called once per frame
-    void Update()
+
+    void FixedUpdate()
     {
         timer += Time.deltaTime;
 

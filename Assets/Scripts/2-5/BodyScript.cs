@@ -21,7 +21,7 @@ public class BodyScript : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         if (!speeder.GetComponent<SpeederScript>().isMoving)
         {

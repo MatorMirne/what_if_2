@@ -7,7 +7,7 @@ public class SceneManage1_4_2 : MonoBehaviour
 {
     public GameObject water, door;
 
-    void Update()
+    void FixedUpdate()
     {
         if (door.GetComponent<DoorScript>().doorClick || water.GetComponent<WaterRoom>().pos.y >= 0)
         {

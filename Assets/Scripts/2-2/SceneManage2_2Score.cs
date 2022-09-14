@@ -11,7 +11,7 @@ public class SceneManage2_2Score : SceneBase
     bool point = false;
 
 
-    void Update()
+    void FixedUpdate()
     {
         timer += Time.deltaTime;
 

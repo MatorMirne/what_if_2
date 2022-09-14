@@ -13,7 +13,7 @@ public class roadScript1_6_2 : MonoBehaviour
         start_pos = transform.position;
     }
 
-    void Update()
+    void FixedUpdate()
     {
         time += Time.deltaTime;
         transform.position = start_pos - new Vector2(0, time*5);

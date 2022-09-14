@@ -20,7 +20,7 @@ public class SceneManage2_1_2: SceneBase
         FadeIn(bg);
     }
 
-    void Update()
+    void FixedUpdate()
     {
         timer += Time.deltaTime;
 

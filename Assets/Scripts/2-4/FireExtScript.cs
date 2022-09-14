@@ -22,7 +22,7 @@ public class FireExtScript : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         if (isDragging)
         {

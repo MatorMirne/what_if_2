@@ -15,7 +15,7 @@ public class SafePinScript : MonoBehaviour
 
 
 
-    void Update()
+    void FixedUpdate()
     {
         timer += Time.deltaTime;
         transform.position = fireExt.transform.position;

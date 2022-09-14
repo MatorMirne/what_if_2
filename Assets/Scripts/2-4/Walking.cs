@@ -20,7 +20,7 @@ public class Walking : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         timer += Time.deltaTime;
         walkSprite = (int)timer % 2;
