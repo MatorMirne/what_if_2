@@ -41,7 +41,7 @@ public class BodyScript : MonoBehaviour
             gameObject.GetComponent<SpriteRenderer>().sortingLayerName = "Background";
             gameObject.GetComponent<SpriteRenderer>().sortingOrder = 1;
 
-            transform.position = new Vector2(pos.x, pos.y - 0.03f);
+            transform.position = new Vector2(pos.x, pos.y - 0.06f);
             if (pos.y >= 1.22)
             {
                 pos = transform.position;
