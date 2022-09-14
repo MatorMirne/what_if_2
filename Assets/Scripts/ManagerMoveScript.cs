@@ -19,7 +19,7 @@ public class ManagerMoveScript : MonoBehaviour
     {
         timer += Time.deltaTime;
 
-        manager.transform.position = new Vector2(pos.x - 0.0009f, pos.y);
+        manager.transform.position = new Vector2(pos.x - 0.02f, pos.y);
 
         if(pos.x > 0)
         {
