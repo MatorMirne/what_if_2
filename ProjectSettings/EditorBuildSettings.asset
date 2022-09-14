@@ -99,6 +99,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Chapter1Score.unity
     guid: 1067529d9f361bc4e8fe6922db6a75c7
   - enabled: 1
+    path: Assets/Scenes/chapter2.unity
+    guid: a219cee1aaeacc948bf4de94796a95e6
+  - enabled: 1
     path: Assets/Scenes/2-1-1.unity
     guid: e02d74453211879419d0f446f0bbc8f8
   - enabled: 1

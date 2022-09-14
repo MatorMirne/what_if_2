@@ -98,7 +98,6 @@ public class SceneManage1_2_1 : MonoBehaviour
             StartCoroutine(ShowOff());
         }
     }
-
     IEnumerator ShowOff()
     {
         float count = 0;

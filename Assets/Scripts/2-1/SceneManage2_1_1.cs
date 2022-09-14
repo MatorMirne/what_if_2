@@ -26,7 +26,7 @@ public class SceneManage2_1_1 : SceneBase
         if (timer > 4.5)
         {
             Debug.Log("to next scene");
-            SceneManager.LoadScene("2-1-2");
+            SceneManager.LoadScene("chapter2");
         }
     }
 }
