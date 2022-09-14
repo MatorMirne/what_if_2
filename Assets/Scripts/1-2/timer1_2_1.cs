@@ -39,7 +39,7 @@ public class timer1_2_1 : MonoBehaviour
             timer_transform.localScale = fullsize * new Vector2(gauge, 1);
             timer_transform.position = pos + new Vector2(gauge * 2.3f, 0);
 
-            yield return new WaitForSeconds(0.02f);
+            yield return null;
         }
 
         Debug.Log("Time Over !");
