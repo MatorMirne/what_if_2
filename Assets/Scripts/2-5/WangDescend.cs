@@ -22,7 +22,7 @@ public class WangDescend : MonoBehaviour
         if(pos.y <= -5.9)
         {
             //  ¾À ³Ñ¾î°¨
-            SceneManager.LoadScene("Chapter2Score");
+            SceneManager.LoadScene("Chapter2Ending");
         }
     }
 }

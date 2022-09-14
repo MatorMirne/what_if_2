@@ -149,4 +149,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Chapter2Score.unity
     guid: bfb82c22ce99f4644b2c1a4ec0d86467
+  - enabled: 1
+    path: Assets/Scenes/Chapter2Ending.unity
+    guid: 981a5d79322f37c458345b643a230de3
+  - enabled: 1
+    path: Assets/Scenes/Ending.unity
+    guid: 4eb2467fdd059fa429b5c45d14f300a8
   m_configObjects: {}

@@ -16,8 +16,13 @@ public class mycar1_6_2 : MonoBehaviour//, IBeginDragHandler, IEndDragHandler, I
     }
 
     void FixedUpdate()
-    {
+    {   
         if (Vector2.Distance(car1.transform.position, transform.position) < 3.5f)
+        {
+            scenemanager.GetComponent<SceneManager1_6_2>().GameOver();
+        }
+
+        if (Vector2.Distance(car2.transform.position, transform.position) < 3.5f)
         {
             scenemanager.GetComponent<SceneManager1_6_2>().GameOver();
         }

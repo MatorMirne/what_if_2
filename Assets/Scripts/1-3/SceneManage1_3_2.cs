@@ -13,6 +13,8 @@ public class SceneManage1_3_2 : SceneBase
     public bool point1;
     public GameObject choice1, choice2;
 
+    public GameObject str1, str2;
+
     float time;
 
 
@@ -39,8 +41,24 @@ public class SceneManage1_3_2 : SceneBase
         }
     }
 
-    public void LoadScene()
+    public void KeepGoing()
+    {
+        choice1.SetActive(false);
+        choice2.SetActive(false);
+        StartCoroutine(KeepGoin());
+    }
+
+    void LoadScene()
     {
         SceneManager.LoadScene(next_scene);
+    }
+
+    IEnumerator KeepGoin()
+    {
+        str1.SetActive(true);
+        yield return new WaitForSeconds(1.5f);
+        str2.SetActive(true);
+        yield return new WaitForSeconds(1.5f);
+        LoadScene();
     }
 }

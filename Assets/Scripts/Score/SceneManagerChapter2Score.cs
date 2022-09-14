@@ -81,7 +81,7 @@ public class SceneManagerChapter2Score : MonoBehaviour
     {
         if (end)
         {
-            SceneManager.LoadScene("StartScene");
+            SceneManager.LoadScene("Ending");
         }
     }
 }

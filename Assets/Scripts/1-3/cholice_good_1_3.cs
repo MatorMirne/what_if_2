@@ -8,6 +8,6 @@ public class cholice_good_1_3 : MonoBehaviour
 
     private void OnMouseDown()
     {
-        scene_manager.GetComponent<SceneManage1_3_2>().LoadScene();
+        scene_manager.GetComponent<SceneManage1_3_2>().KeepGoing();
     }
 }
