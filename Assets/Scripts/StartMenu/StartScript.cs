@@ -12,4 +12,5 @@ public class StartScript : MonoBehaviour
         SceneManager.LoadScene("1-1-1");
     }
 
+
 }
