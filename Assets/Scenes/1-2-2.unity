@@ -735,7 +735,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 335016f6a64489240ba0862c5a4c0317, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  time_total: 100
+  time_total: 150
   time_now: 0
   scene_manager: {fileID: 1281805145}
 --- !u!1 &760505223
