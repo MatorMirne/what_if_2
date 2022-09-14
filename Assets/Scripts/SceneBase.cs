@@ -16,12 +16,12 @@ public class SceneBase : MonoBehaviour
 
     IEnumerator FadeInCoroutine(GameObject _gameObject)
     {
-        float fade_count = 0;
-        while (fade_count < 1.0f)
+        float time = 0;
+        while (time < 1.0f)
         {
-            fade_count += 0.01f;
-            yield return new WaitForSeconds(0.01f);
-            _gameObject.GetComponent<SpriteRenderer>().color = new Color(255, 255, 255, fade_count);
+            time += Time.deltaTime;
+            yield return null;
+            _gameObject.GetComponent<SpriteRenderer>().color = new Color(255, 255, 255, time);
         }
     }
 
@@ -36,12 +36,12 @@ public class SceneBase : MonoBehaviour
 
     IEnumerator FadeOutCoroutine(GameObject _gameObject)
     {
-        float fade_count = 0;
-        while (fade_count < 1.0f)
+        float time = 0;
+        while (time < 1.0f)
         {
-            fade_count += 0.01f;
-            yield return new WaitForSeconds(0.01f);
-            _gameObject.GetComponent<SpriteRenderer>().color = new Color(255, 255, 255, 1.0f - fade_count);
+            time += Time.deltaTime;
+            yield return null;
+            _gameObject.GetComponent<SpriteRenderer>().color = new Color(255, 255, 255, 1.0f - time);
         }
         _gameObject.SetActive(false);
     }
