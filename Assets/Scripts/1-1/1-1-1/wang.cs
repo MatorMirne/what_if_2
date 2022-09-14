@@ -22,7 +22,7 @@ public class wang : MonoBehaviour
         start_position = transform.position;
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
         time += Time.deltaTime;
         timer += Time.deltaTime*speed;

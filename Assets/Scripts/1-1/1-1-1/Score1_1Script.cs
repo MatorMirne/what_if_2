@@ -25,9 +25,4 @@ public class Score1_1Script : MonoBehaviour
         }
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

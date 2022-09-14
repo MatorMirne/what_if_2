@@ -34,7 +34,7 @@ public class SceneManage1_1_6 : MonoBehaviour
         start_position = transform.position;
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
         timer += Time.deltaTime * speed;
         time += Time.deltaTime;

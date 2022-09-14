@@ -21,7 +21,7 @@ public class wang1_1_5 : MonoBehaviour
         start_position = transform.position;
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
         time += Time.deltaTime;
         timer += Time.deltaTime*speed;

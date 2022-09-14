@@ -34,9 +34,5 @@ public class SceneManage1_1_3 : MonoBehaviour
 
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+
 }

@@ -14,7 +14,7 @@ public class SceneManage1_1_4 : SceneBase
     public GameObject choice1;
     public GameObject choice2;
 
-    void Update()
+    void FixedUpdate()
     {
         timer += Time.deltaTime;
 

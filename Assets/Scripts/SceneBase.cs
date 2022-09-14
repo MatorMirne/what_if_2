@@ -20,7 +20,7 @@ public class SceneBase : MonoBehaviour
         while (fade_count < 1.0f)
         {
             fade_count += 0.01f;
-            yield return new WaitForSeconds(0.01f);
+            yield return null;
             _gameObject.GetComponent<SpriteRenderer>().color = new Color(255, 255, 255, fade_count);
         }
     }
@@ -40,7 +40,7 @@ public class SceneBase : MonoBehaviour
         while (fade_count < 1.0f)
         {
             fade_count += 0.01f;
-            yield return new WaitForSeconds(0.01f);
+            yield return null;
             _gameObject.GetComponent<SpriteRenderer>().color = new Color(255, 255, 255, 1.0f - fade_count);
         }
         _gameObject.SetActive(false);

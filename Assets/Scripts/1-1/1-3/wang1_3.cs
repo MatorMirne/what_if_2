@@ -12,10 +12,7 @@ public class wang1_3 : MonoBehaviour
         spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
     }
 
-    private void Start()
-    {
-        
-    }
+
 
     private void OnMouseDown()
     {
